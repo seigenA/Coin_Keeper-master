@@ -1,0 +1,154 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "demo@demo.com",
+      "password": "demo"
+    },
+    {
+      "email": "almaz@gmail.com",
+      "password": "12345678",
+      "id": 2
+    }
+  ],
+  "accounts": [
+    {
+      "id": 1,
+      "userId": 1,
+      "name": "Cash",
+      "currency": "USD"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "name": "Card",
+      "currency": "USD"
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "name": "Almaz Wallet",
+      "currency": "KZT"
+    },
+    {
+      "name": "Wallet",
+      "currency": "USD",
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "name": "Card",
+      "currency": "KZT",
+      "userId": 2,
+      "id": 5
+    },
+    {
+      "name": "Cash",
+      "currency": "USD",
+      "userId": 2,
+      "id": 6
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "userId": 1,
+      "name": "Salary",
+      "type": "income"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "name": "Food",
+      "type": "expense"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "name": "Entertainment",
+      "type": "expense"
+    }
+  ],
+  "transactions": [
+    {
+      "id": 1,
+      "userId": 1,
+      "accountId": 1,
+      "categoryId": 1,
+      "type": "income",
+      "amount": 1500,
+      "date": "2025-05-01",
+      "comment": "April salary"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "accountId": 2,
+      "categoryId": 2,
+      "type": "expense",
+      "amount": 25,
+      "date": "2025-05-03",
+      "comment": "Lunch"
+    },
+    {
+      "type": "expense",
+      "amount": 300,
+      "categoryId": "",
+      "date": "2025-05-07",
+      "comment": "Credit",
+      "accountId": 1,
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "type": "income",
+      "amount": 200000,
+      "categoryId": "",
+      "date": "2025-05-10",
+      "comment": "",
+      "accountId": 3,
+      "userId": 2,
+      "id": 4
+    },
+    {
+      "type": "income",
+      "amount": 555,
+      "categoryId": "",
+      "date": "2025-05-10",
+      "comment": "",
+      "accountId": 3,
+      "userId": 2,
+      "id": 5
+    },
+    {
+      "type": "income",
+      "amount": 100000,
+      "categoryId": "",
+      "date": "2025-05-06",
+      "comment": "",
+      "accountId": 6,
+      "userId": 2,
+      "id": 6
+    },
+    {
+      "type": "expense",
+      "amount": 25432542,
+      "categoryId": "",
+      "date": "2025-05-10",
+      "comment": "",
+      "accountId": 6,
+      "userId": 2,
+      "id": 7
+    },
+    {
+      "type": "income",
+      "amount": 252352352252,
+      "categoryId": "",
+      "date": "2025-05-10",
+      "comment": "",
+      "accountId": 6,
+      "userId": 2,
+      "id": 8
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "coinkeeper",
+  "private": true,
+  "version": "1.1.0",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "install-all": "npm install --workspaces",
+    "api": "npm run --prefix backend api",
+    "dev": "concurrently \"npm run api\" \"npm run --prefix frontend dev\"",
+    "build": "npm run --prefix frontend build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
