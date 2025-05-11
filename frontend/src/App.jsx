@@ -1,11 +1,13 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import { ToastContainer } from 'react-toastify'
 import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
 import DashboardPage from './pages/DashboardPage'
 import StatsPage from './pages/StatsPage'
 import SettingsPage from './pages/SettingsPage'
 import { ThemeProvider, useTheme } from './context/ThemeContext'
+import 'react-toastify/dist/ReactToastify.css'
 
 function AppRoutes() {
     const isAuth = useSelector(state => !!state.auth.user)
@@ -24,6 +26,18 @@ function AppRoutes() {
                 <Route path="/settings" element={<Private><SettingsPage /></Private>} />
                 <Route path="*" element={<Navigate to="/" />} />
             </Routes>
+            <ToastContainer
+                position="top-right"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="colored"
+            />
         </div>
     )
 }

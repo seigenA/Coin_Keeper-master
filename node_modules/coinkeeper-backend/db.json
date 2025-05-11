@@ -47,108 +47,90 @@
       "currency": "USD",
       "userId": 2,
       "id": 6
+    },
+    {
+      "name": "Test",
+      "currency": "RUB",
+      "userId": 2,
+      "id": 7
+    },
+    {
+      "name": "...",
+      "currency": "EUR",
+      "userId": 2,
+      "id": 8
     }
   ],
   "categories": [
     {
-      "id": 1,
-      "userId": 1,
       "name": "Salary",
-      "type": "income"
+      "type": "income",
+      "color": "#40da16",
+      "userId": 2,
+      "id": 1
     },
     {
-      "id": 2,
-      "userId": 1,
+      "name": "Stepa",
+      "type": "income",
+      "color": "#096df1",
+      "userId": 2,
+      "id": 2
+    },
+    {
+      "name": "House",
+      "type": "expense",
+      "color": "#d70f0f",
+      "userId": 2,
+      "id": 3
+    },
+    {
       "name": "Food",
-      "type": "expense"
-    },
-    {
-      "id": 3,
-      "userId": 1,
-      "name": "Entertainment",
-      "type": "expense"
+      "type": "expense",
+      "color": "#d41685",
+      "userId": 2,
+      "id": 4
     }
   ],
   "transactions": [
     {
-      "id": 1,
-      "userId": 1,
-      "accountId": 1,
-      "categoryId": 1,
       "type": "income",
-      "amount": 1500,
-      "date": "2025-05-01",
-      "comment": "April salary"
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "accountId": 2,
-      "categoryId": 2,
-      "type": "expense",
-      "amount": 25,
-      "date": "2025-05-03",
-      "comment": "Lunch"
+      "amount": 2000,
+      "categoryId": "2",
+      "date": "2025-05-19",
+      "comment": "ЗП",
+      "accountId": 7,
+      "userId": 2,
+      "id": 2
     },
     {
       "type": "expense",
-      "amount": 300,
-      "categoryId": "",
+      "amount": 200,
+      "categoryId": "4",
       "date": "2025-05-07",
-      "comment": "Credit",
-      "accountId": 1,
-      "userId": 1,
+      "comment": "",
+      "accountId": 7,
+      "userId": 2,
       "id": 3
     },
     {
       "type": "income",
-      "amount": 200000,
-      "categoryId": "",
-      "date": "2025-05-10",
+      "amount": 4000,
+      "categoryId": "1",
+      "date": "2025-05-07",
       "comment": "",
-      "accountId": 3,
+      "accountId": 7,
       "userId": 2,
       "id": 4
     },
     {
       "type": "income",
-      "amount": 555,
-      "categoryId": "",
-      "date": "2025-05-10",
+      "amount": 2000,
+      "categoryId": "2",
+      "date": "2025-05-21",
       "comment": "",
-      "accountId": 3,
+      "accountId": 7,
       "userId": 2,
       "id": 5
-    },
-    {
-      "type": "income",
-      "amount": 100000,
-      "categoryId": "",
-      "date": "2025-05-06",
-      "comment": "",
-      "accountId": 6,
-      "userId": 2,
-      "id": 6
-    },
-    {
-      "type": "expense",
-      "amount": 25432542,
-      "categoryId": "",
-      "date": "2025-05-10",
-      "comment": "",
-      "accountId": 6,
-      "userId": 2,
-      "id": 7
-    },
-    {
-      "type": "income",
-      "amount": 252352352252,
-      "categoryId": "",
-      "date": "2025-05-10",
-      "comment": "",
-      "accountId": 6,
-      "userId": 2,
-      "id": 8
     }
   ]
 }
