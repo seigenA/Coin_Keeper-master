@@ -1,28 +1,58 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import api from '../../api/axios'
-import { selectUserId } from './authSlice'
 
-export const fetchAccounts = createAsyncThunk('accounts/fetch', async (_, { getState }) => {
-  const userId = selectUserId(getState())
-  const res = await api.get(`/accounts?userId=${userId}`)
-  return res.data
+export const fetchAccounts = createAsyncThunk('accounts/fetchAccounts', async () => {
+  const response = await api.get('/accounts')
+  return response.data
 })
 
-export const addAccount = createAsyncThunk('accounts/add', async (account, { getState }) => {
-  const userId = selectUserId(getState())
-  const res = await api.post('/accounts', { ...account, userId })
-  return res.data
+export const addAccount = createAsyncThunk('accounts/addAccount', async (account) => {
+  const response = await api.post('/accounts', account)
+  return response.data
 })
 
-const slice = createSlice({
+export const updateAccount = createAsyncThunk('accounts/updateAccount', async ({ id, updates }) => {
+  const response = await api.put(`/accounts/${id}`, updates)
+  return response.data
+})
+
+export const deleteAccount = createAsyncThunk('accounts/deleteAccount', async (id) => {
+  await api.delete(`/accounts/${id}`)
+  return id
+})
+
+const accountsSlice = createSlice({
   name: 'accounts',
-  initialState: { list: [], status: 'idle' },
+  initialState: {
+    list: [],
+    status: 'idle',
+    error: null
+  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchAccounts.fulfilled, (s, a) => { s.list = a.payload })
-      .addCase(addAccount.fulfilled, (s, a) => { s.list.push(a.payload) })
+        .addCase(fetchAccounts.pending, (state) => {
+          state.status = 'loading'
+        })
+        .addCase(fetchAccounts.fulfilled, (state, action) => {
+          state.status = 'succeeded'
+          state.list = action.payload
+        })
+        .addCase(fetchAccounts.rejected, (state, action) => {
+          state.status = 'failed'
+          state.error = action.error.message
+        })
+        .addCase(addAccount.fulfilled, (state, action) => {
+          state.list.push(action.payload)
+        })
+        .addCase(updateAccount.fulfilled, (state, action) => {
+          const index = state.list.findIndex(a => a.id === action.payload.id)
+          if (index !== -1) state.list[index] = action.payload
+        })
+        .addCase(deleteAccount.fulfilled, (state, action) => {
+          state.list = state.list.filter(a => a.id !== action.payload)
+        })
   }
 })
 
-
-export default slice.reducer
+export default accountsSlice.reducer

@@ -9,21 +9,19 @@
       "email": "almaz@gmail.com",
       "password": "12345678",
       "id": 2
+    },
+    {
+      "email": "test@test.com",
+      "password": "test",
+      "id": 3
+    },
+    {
+      "email": "ala@maul.ru",
+      "password": "12345678",
+      "id": 4
     }
   ],
   "accounts": [
-    {
-      "id": 1,
-      "userId": 1,
-      "name": "Cash",
-      "currency": "USD"
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "name": "Card",
-      "currency": "USD"
-    },
     {
       "id": 3,
       "userId": 2,
@@ -31,34 +29,10 @@
       "currency": "KZT"
     },
     {
-      "name": "Wallet",
-      "currency": "USD",
-      "userId": 1,
-      "id": 4
-    },
-    {
-      "name": "Card",
-      "currency": "KZT",
-      "userId": 2,
-      "id": 5
-    },
-    {
-      "name": "Cash",
-      "currency": "USD",
-      "userId": 2,
-      "id": 6
-    },
-    {
       "name": "Test",
       "currency": "RUB",
       "userId": 2,
       "id": 7
-    },
-    {
-      "name": "...",
-      "currency": "EUR",
-      "userId": 2,
-      "id": 8
     }
   ],
   "categories": [
@@ -89,24 +63,48 @@
       "color": "#d41685",
       "userId": 2,
       "id": 4
+    },
+    {
+      "name": "Shope",
+      "type": "expense",
+      "color": "#000000",
+      "userId": 2,
+      "id": 5
+    },
+    {
+      "name": "Posob",
+      "type": "income",
+      "color": "#4e10e0",
+      "userId": 2,
+      "id": 6
     }
   ],
   "transactions": [
     {
       "type": "income",
-      "amount": 2000,
-      "categoryId": "2",
-      "date": "2025-05-19",
-      "comment": "ЗП",
+      "amount": 20000,
+      "categoryId": "1",
+      "date": "2025-04-05",
+      "comment": "",
+      "accountId": 7,
+      "userId": 2,
+      "id": 1
+    },
+    {
+      "type": "income",
+      "amount": 20000,
+      "categoryId": 1,
+      "date": "2025-05-05",
+      "comment": "",
       "accountId": 7,
       "userId": 2,
       "id": 2
     },
     {
-      "type": "expense",
-      "amount": 200,
-      "categoryId": "4",
-      "date": "2025-05-07",
+      "type": "income",
+      "amount": 5000,
+      "categoryId": "2",
+      "date": "2025-04-21",
       "comment": "",
       "accountId": 7,
       "userId": 2,
@@ -114,9 +112,9 @@
     },
     {
       "type": "income",
-      "amount": 4000,
-      "categoryId": "1",
-      "date": "2025-05-07",
+      "amount": 5000,
+      "categoryId": "2",
+      "date": "2025-05-26",
       "comment": "",
       "accountId": 7,
       "userId": 2,
@@ -125,12 +123,72 @@
     {
       "type": "income",
       "amount": 2000,
-      "categoryId": "2",
-      "date": "2025-05-21",
+      "categoryId": "6",
+      "date": "2025-05-15",
       "comment": "",
       "accountId": 7,
       "userId": 2,
       "id": 5
+    },
+    {
+      "type": "expense",
+      "amount": 12000,
+      "categoryId": 3,
+      "date": "2025-04-28",
+      "comment": "",
+      "accountId": 7,
+      "userId": 2,
+      "id": 6
+    },
+    {
+      "type": "expense",
+      "amount": 10000,
+      "categoryId": 3,
+      "date": "2025-05-06",
+      "comment": "",
+      "accountId": 7,
+      "userId": 2,
+      "id": 7
+    },
+    {
+      "type": "expense",
+      "amount": 1000,
+      "categoryId": "4",
+      "date": "2025-04-30",
+      "comment": "",
+      "accountId": 7,
+      "userId": 2,
+      "id": 8
+    },
+    {
+      "type": "expense",
+      "amount": 2000,
+      "categoryId": "4",
+      "date": "2025-05-10",
+      "comment": "",
+      "accountId": 7,
+      "userId": 2,
+      "id": 9
+    },
+    {
+      "type": "expense",
+      "amount": 1000,
+      "categoryId": "4",
+      "date": "2025-05-11",
+      "comment": "",
+      "accountId": 7,
+      "userId": 2,
+      "id": 10
+    },
+    {
+      "type": "expense",
+      "amount": 3000,
+      "categoryId": "5",
+      "date": "2025-05-11",
+      "comment": "",
+      "accountId": 7,
+      "userId": 2,
+      "id": 11
     }
   ]
 }

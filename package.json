@@ -16,6 +16,7 @@
     "concurrently": "^9.0.0"
   },
   "dependencies": {
+    "date-fns": "^4.1.0",
     "react-toastify": "^11.0.5",
     "recharts": "^2.15.3"
   }
